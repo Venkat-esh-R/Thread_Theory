@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thread Theory</title>
+    <link rel="stylesheet" href="proj.css">
+</head>
+<body>
+    <header>
+        <h1 id="page-heading">Thread Theory</h1>
+        <p>!Discover the elegance of fusion fashion!</p>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showCategory('hoodie')">Hoodie</a>
+        <a href="#" onclick="showCategory('baggy')">Baggy's</a>
+        <a href="#" onclick="showCategory('SweatShirts')">Sweat-Shirts</a>
+    </nav>
+
+    <div id="hoodie" class="grid-container active">
+        <h2>Hoodie</h2>
+        <div class="card" id="hoodie-card-1" onclick="this.querySelector('.product-name-overlay').style.display = 'block'">
+            <img src="/Users/venkateshr/Downloads/hooodie black.jpeg" alt="Hoodie">
+            <div class="product-name-overlay">Hoodie</div>
+            <div class="card-content">
+                <h3 class="card-title">Hoodie</h3>
+                <p class="card-price">&#8377;1599</p>
+                <div class="card-options">
+                    <label for="size">Size:</label>
+                    <p>Select Size:</p>
+    <div class="size-options">
+        <button class="size-box" onclick="updateSize('Small', 'hoodie-card-1')">S</button>
+        <button class="size-box" onclick="updateSize('Medium', 'hoodie-card-1')">M</button>
+        <button class="size-box" onclick="updateSize('Large', 'hoodie-card-1')">L</button>
+    </div>
+
+                    <label for="color">Color:</label>
+                    <p>Select Color:</p>
+    <div class="color-options">
+        <button class="color-box" style="background: black;" onclick="changeImage('hoodie-card-1', 'Black')"></button>
+        <button class="color-box" style="background: beige;" onclick="changeImage('hoodie-card-1', 'Beige')"></button>
+        <button class="color-box" style="background: brown;" onclick="changeImage('hoodie-card-1', 'Solid Brown')"></button>
+    </div>
+                </div>
+                <button onclick="addToBasket('Hoodie', 'hoodie-card-1')">Add to Basket</button>
+            </div>
+
+</div>
+        </div>
+    </div>
+
+    <div id="baggy" class="grid-container">
+        <h2>Baggy's</h2>
+        <div class="card" id="baggy-card-1" onclick="this.querySelector('.product-name-overlay').style.display = 'block'">
+            <img src="/Users/venkateshr/Downloads/Ovrszed blck .jpeg" alt="Baggy">
+            <div class="product-name-overlay">Baggy</div>
+            <div class="card-content">
+                <h3 class="card-title">Baggy Fit's</h3>
+                <p class="card-price">&#8377;2,999</p>
+                <div class="card-options">
+                   
+                <p>Select Color:</p>
+                <div class="color-options">
+                    <button class="color-box" style="background: black;" onclick="changeImage('baggy-card-1', 'Black')"></button>
+                    <button class="color-box" style="background: white;" onclick="changeImage('baggy-card-1', 'White')"></button>
+                    <button class="color-box" style="background: gray;" onclick="changeImage('baggy-card-1', 'Mixed')"></button>
+                </div>
+            </div>
+                <button onclick="addToBasket('Baggy', 'baggy-card-1')">Add to Basket</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="SweatShirts" class="grid-container">
+        <h2>Sweat-Shirts</h2>
+        <div class="card" id="sweatshirt-card-1" onclick="this.querySelector('.product-name-overlay').style.display = 'block'">
+            <img src="/Users/venkateshr/Downloads/S Creamy.jpeg" alt="SweatShirts">
+            <div class="product-name-overlay">Sweatshirt</div>
+            <div class="card-content">
+                <h3 class="card-title">SweatShirts</h3>
+                <p class="card-price">&#8377;1099</p>
+                <div class="card-options">
+                    <p>Select Size:</p>
+                <div class="size-options">
+                    <button class="size-box" onclick="updateSize('Small', 'sweatshirt-card-1')">S</button>
+                    <button class="size-box" onclick="updateSize('Medium', 'sweatshirt-card-1')">M</button>
+                    <button class="size-box" onclick="updateSize('Large', 'sweatshirt-card-1')">L</button>
+                </div>
+
+                <p>Select Color:</p>
+                <div class="color-options">
+                    <button class="color-box" style="background: beige;" onclick="changeImage('sweatshirt-card-1', 'Creamy')"></button>
+                    <button class="color-box" style="background: green;" onclick="changeImage('sweatshirt-card-1', 'Green')"></button>
+                    <button class="color-box" style="background: lightblue;" onclick="changeImage('sweatshirt-card-1', 'Printed')"></button>
+                </div>
+            </div>
+                <button onclick="addToBasket('SweatShirt', 'sweatshirt-card-1')">Add to Basket</button>
+            </div>
+        </div>
+    </div>
+    <script src="proj.js"></script>
+</body>
+</html>

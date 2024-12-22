@@ -1,0 +1,208 @@
+body {
+            background: url('/Users/venkateshr/Pictures/Photos Library.photoslibrary/resources/renders/4/4FDEE158-5B09-4BCF-A3EE-B35132CE28AA_1_201_a.jpeg') no-repeat center/cover;
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff4e6;
+        }
+        header {
+            background: url('/Users/venkateshr/Downloads/bgr.jpeg') no-repeat center/cover;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            display: flex;
+            overflow-x: auto;
+            background: #333;
+            padding: 0.5rem;
+            white-space: nowrap;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            flex-shrink: 0;
+        }
+        nav a:hover {
+            background: #ff5328;
+            border-radius: 5px;
+        }
+        .grid-container {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 1.5rem;
+        }
+        .grid-container.active {
+            display: grid;
+        }
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 300px;  
+            height: 300px; 
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 1rem;
+        }
+        .card-title {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .card-price {
+            color: #ff7e5f;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        .card-options {
+            margin: 0.5rem 0;
+        }
+        .card-options label {
+            display: block;
+            margin: 0.2rem 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+         .product-name-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            display: none; 
+        }
+        .card:hover .product-name-overlay {
+            display: block;
+        }
+
+        
+        
+        button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease, opacity 0.8s ease;
+    opacity: 0;
+}
+
+button:active::after {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transition: width 0.2s ease, height 0.2s ease;
+}
+
+.size-options, .color-options {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.size-box {
+    width: 40px;
+    height: 40px;
+    background: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.size-box:hover {
+    background: #feb47b;
+    color: white;
+    border-color: #ff7e5f;
+    transform: scale(1.1);
+}
+
+
+.color-box {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.color-box:hover {
+    border-color: #ff7e5f;
+    transform: scale(1.1);
+}
+.size-box.selected {
+    background: #ff7e5f;
+    color: white;
+    border-color: #feb47b;
+    transform: scale(1.2);
+}
